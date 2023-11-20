@@ -1,28 +1,39 @@
 import java.util.Scanner;
 
-public class Exercício_2 {
+public class Exercicio2 {
 
-    public static void main(String[] args) {
-    
-        Scanner in = new Scanner(System.in);
-        
-int[] A = new int[5];
-
-for (int i = 0; i < 5; i++) {
-
-            System.out.print("Informe o elemento " + (i + 1) + ": ");
-            
-            A[i] = in.nextInt();
-}
-for (int i = 0; i < A.length; i++) {
-
-            System.out.println("Tabuada de " + A[i] + ":");
-            for (int j = 1; j <= 10; j++) {
-                int resultado = A[i] * j;
-                System.out.println(A[i] + " x " + j + " = " + resultado);
-            }
-            System.out.println();
-        in.close();
-    }
-    }
-}
+	public static void main(String[] args) {
+ 
+		Scanner in = new Scanner (System.in);
+  
+		final int TAM=10;
+  
+		int i, a[], b[], c[];
+		a= new int [TAM];
+		b= new int [TAM];
+		c= new int [TAM];
+		for (i=0; i<TAM; i++) {
+			 System.out.println("insira o "+(i+1)+ "o. valor do Vetor A");
+			 a[i]=in.nextInt();
+			 System.out.println("insira o "+(i+1)+ "o. valor do vetor B");
+			 b[i]=in.nextInt();
+			 c[i]=a[i]+b[i];
+			}
+		System.out.print("A[] = [");
+		for (i=0;i<TAM;i++) {
+			System.out.print(a[i]+ " ");
+		}
+		System.out.println("]");
+		System.out.print("B[] = [");
+		for (i=0;i<TAM;i++) {
+			System.out.print(b[i]+ " ");
+		}
+		System.out.println("]");
+		System.out.print("C[] = [");
+		for (i=0;i<TAM;i++) {
+			System.out.print(c[i]+ " ");
+		}
+		System.out.print("]");
+		in.close();
+	}
+ }
