@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Exercício1 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int[] A = new int[20];
+
+        for (int i = 0; i < 20; i++) {
+            System.out.print("Informe o elemento " + (i + 1) + ": ");
+            A[i] = ler.nextInt();
+        }
+
+
+        int[] pares = new int[20];
+        int[] impares = new int[20];
+        int indicePares = 0;
+        int indiceImpares = 0;
+
+        
+        for (int elemento : A) {
+            if (elemento % 2 == 0) { 
+                pares[indicePares] = elemento;
+                indicePares++;
+            } else { 
+                impares[indiceImpares] = elemento;
+                indiceImpares++;
+            }
+        }
+
+        
+        pares = java.util.Arrays.copyOfRange(pares, 0, indicePares);
+        impares = java.util.Arrays.copyOfRange(impares, 0, indiceImpares);
+
+     
+        System.out.println("Vetor de Pares:");
+        System.out.print("[");
+        for (int elemento : pares) {
+            System.out.print(elemento + " ");
+        }
+        System.out.print("]");
+
+        System.out.println("\nVetor de Ímpares: ");
+        System.out.print("[");
+        for (int elemento : impares) {
+            System.out.print(elemento + " ");
+        }
+        System.out.print("]");
+
+        ler.close();
+    }
+}
